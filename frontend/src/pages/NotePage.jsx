@@ -27,7 +27,7 @@ const NotePage = () => {
     }
 
     let createNote = async ()=>{
-        fetch(`http://127.0.0.1:8000/api/notes/create/`,
+        fetch(`http://127.0.0.1:8000/api/notes/`,
         {
             method: 'POST',
             redirect: 'follow',
@@ -41,7 +41,7 @@ const NotePage = () => {
     }
 
     let updateNote = async ()=>{
-        fetch(`http://127.0.0.1:8000/api/notes/${noteId}/update/`,
+        fetch(`http://127.0.0.1:8000/api/notes/${noteId}/`,
         {
             method: 'PUT',
             redirect: 'follow',
@@ -55,7 +55,7 @@ const NotePage = () => {
     }
 
     const deleteNote = async () => {
-        fetch(`http://127.0.0.1:8000/api/notes/${noteId}/delete/`,{
+        fetch(`http://127.0.0.1:8000/api/notes/${noteId}/`,{
             method: 'DELETE',
             redirect: 'follow',
             headers: {
